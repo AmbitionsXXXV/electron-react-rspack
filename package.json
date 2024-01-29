@@ -1,0 +1,96 @@
+{
+  "name": "electron-react-rspack",
+  "productName": "electron-react-rspack",
+  "version": "0.5.9",
+  "description": "this is a electron-react-rspack project",
+  "main": ".rspack/main",
+  "scripts": {
+    "start": "cross-env NODE_ENV=development electron-forge start",
+    "package": "cross-env NODE_ENV=production electron-forge package",
+    "make": "cross-env NODE_ENV=production electron-forge make",
+    "publish": "cross-env NODE_ENV=production electron-forge publish",
+    "lint": "eslint --ext .ts,.tsx ."
+  },
+  "keywords": [],
+  "author": {
+    "name": "etcetera"
+  },
+  "license": "MIT",
+  "packageManager": "pnpm@8.15.0",
+  "devDependencies": {
+    "@ant-design/cssinjs": "1.18.4",
+    "@electron-forge/cli": "^7.2.0",
+    "@electron-forge/maker-deb": "^7.2.0",
+    "@electron-forge/maker-dmg": "^7.2.0",
+    "@electron-forge/maker-rpm": "^7.2.0",
+    "@electron-forge/maker-squirrel": "^7.2.0",
+    "@electron-forge/maker-zip": "^7.2.0",
+    "@electron-forge/plugin-auto-unpack-natives": "^7.2.0",
+    "@electron-forge/plugin-webpack": "^7.2.0",
+    "@rspack/plugin-react-refresh": "^0.5.2",
+    "@types/lint-staged": "^13.3.0",
+    "@types/lodash": "^4.14.202",
+    "@types/lodash-es": "^4.17.12",
+    "@types/react": "^18.2.48",
+    "@types/react-dom": "^18.2.18",
+    "@types/react-router-dom": "^5.3.3",
+    "autoprefixer": "^10.4.17",
+    "copy-webpack-plugin": "^12.0.2",
+    "cross-env": "^7.0.3",
+    "css-loader": "^6.9.1",
+    "css-minimizer-webpack-plugin": "^6.0.0",
+    "electron": "28.1.4",
+    "electron-forge-plugin-rspack": "^0.0.3",
+    "esbuild": "^0.19.12",
+    "esbuild-loader": "^4.0.3",
+    "etc-fe-lint": "^1.1.22",
+    "fork-ts-checker-webpack-plugin": "^9.0.2",
+    "lint-staged": "^15.2.0",
+    "mini-css-extract-plugin": "^2.7.7",
+    "node-loader": "^2.0.0",
+    "postcss": "^8.4.33",
+    "postcss-loader": "^8.0.0",
+    "react-refresh": "^0.14.0",
+    "style-loader": "^3.3.4",
+    "tailwindcss": "^3.4.1",
+    "ts-loader": "^9.5.1",
+    "ts-node": "^10.9.2",
+    "typescript": "~5.3.3"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^5.2.6",
+    "@mdx-js/loader": "^3.0.0",
+    "@mdx-js/react": "^3.0.0",
+    "@rspack/plugin-node-polyfill": "^0.5.2",
+    "antd": "^5.13.2",
+    "antd-style": "^3.6.1",
+    "electron-log": "^5.1.0",
+    "electron-squirrel-startup": "^1.0.0",
+    "electron-store": "^8.1.0",
+    "etc-hooks": "^0.5.2",
+    "html-loader": "^5.0.0",
+    "jotai": "^2.6.3",
+    "jszip": "^3.10.1",
+    "lodash": "^4.17.21",
+    "lodash-es": "^4.17.21",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.21.3",
+    "stream": "^0.0.2",
+    "stream-browserify": "^3.0.0",
+    "update-electron-app": "^3.0.0",
+    "winston": "^3.11.0",
+    "winston-daily-rotate-file": "^4.7.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "prettier --write",
+      "eslint --fix"
+    ]
+  }
+}
